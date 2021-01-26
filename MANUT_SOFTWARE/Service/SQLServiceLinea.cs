@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace MANUT_SOFTWARE.Service
 {
-    class SQLServiceReparto : SQLClass_ServiceConnect
+    class SQLServiceLinea : SQLClass_ServiceConnect
     {
-        public void RepartoSQL_INSERT(string Codice, string Nome)
+        public void LineaSQL_INSERT(string Codice, string Nome)
         {
 
-            RepartoViewModel Reparto = new RepartoViewModel();
+            LineaViewModel Linea = new LineaViewModel();
             NomeTabelle Manutenzione = new NomeTabelle();
 
-            string query = "INSERT INTO " + Manutenzione.RepartoSQL+" ("+ nameof(Reparto.Codice)+"," + nameof(Reparto.Nome)+") VALUES(@Codice, @Nome)";
+            string query = "INSERT INTO " + Manutenzione.LineaSQL+" ("+ nameof(Linea.Codice)+"," + nameof(Linea.Nome)+") VALUES(@Codice, @Nome)";
             SqlCommand cmd = new SqlCommand(query,Open());
 
             //Pass values to Parameters
@@ -27,7 +27,7 @@ namespace MANUT_SOFTWARE.Service
             try
             {
                  cmd.ExecuteNonQuery();
-                MessageBox.Show("Il reparto è stato inserito correttamente");
+                MessageBox.Show("La linea è stata inserita correttamente");
             }
             catch (SqlException e)
             {
@@ -40,32 +40,30 @@ namespace MANUT_SOFTWARE.Service
             
         }
 
-        public List<RepartoViewModel> RepartoSQL_SELECT()
+        public List<LineaViewModel> LineaSQL_SELECT()
 
         {
 
-            List<RepartoViewModel> LP = new List<RepartoViewModel>();
+            List<LineaViewModel> LL = new List<LineaViewModel>();
             DataTable dr = new DataTable();
             NomeTabelle Manutenzione = new NomeTabelle();
 
-            using (SqlCommand command = new SqlCommand("SELECT* FROM " + Manutenzione.RepartoSQL, Open()))
+            using (SqlCommand command = new SqlCommand("SELECT* FROM " + Manutenzione.LineaSQL, Open()))
             {
                 // result gives the -1 output.. but on insert its 1
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-               
                     // iterate your results here
                     while (reader.Read())
                     {
-                        RepartoViewModel R = new RepartoViewModel();
-                        R.ID = (Int32)reader["ID"];
-                        R.Codice = reader["Codice"].ToString();
-                        R.Nome = reader["Nome"].ToString();
-                        LP.Add(R);
+                        LineaViewModel L = new LineaViewModel();
+                        L.ID = (Int32)reader["ID"];
+                        L.Codice = reader["Codice"].ToString();
+                        L.Nome = reader["Nome"].ToString();
+                        LL.Add(L);
 
                     }
-
-                    return LP;
+                    return LL;
                 }
 
             }

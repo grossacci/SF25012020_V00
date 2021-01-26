@@ -42,16 +42,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1904, 106);
+            this.panel1.Size = new System.Drawing.Size(1370, 106);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 1006);
+            this.panel2.Location = new System.Drawing.Point(0, 714);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1904, 35);
+            this.panel2.Size = new System.Drawing.Size(1370, 35);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -60,7 +60,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 106);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(154, 900);
+            this.panel3.Size = new System.Drawing.Size(154, 608);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -69,7 +69,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(154, 106);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1750, 900);
+            this.panel4.Size = new System.Drawing.Size(1216, 608);
             this.panel4.TabIndex = 3;
             // 
             // anagraficaMacchine1
@@ -78,14 +78,14 @@
             this.anagraficaMacchine1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.anagraficaMacchine1.Location = new System.Drawing.Point(0, 0);
             this.anagraficaMacchine1.Name = "anagraficaMacchine1";
-            this.anagraficaMacchine1.Size = new System.Drawing.Size(1750, 900);
+            this.anagraficaMacchine1.Size = new System.Drawing.Size(1216, 608);
             this.anagraficaMacchine1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

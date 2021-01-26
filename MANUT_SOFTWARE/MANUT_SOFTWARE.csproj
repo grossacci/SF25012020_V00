@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Service\NomeTabelle.cs" />
+    <Compile Include="Service\SQLServiceLinea.cs" />
     <Compile Include="Service\SQLServiceReparto.cs" />
     <Compile Include="SQLClass_ServiceConnect.cs" />
     <Compile Include="View\Anagrafiche.cs">
