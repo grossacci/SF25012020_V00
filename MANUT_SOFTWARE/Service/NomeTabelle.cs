@@ -8,11 +8,11 @@ namespace MANUT_SOFTWARE.Service
 {
     class NomeTabelle
     {
-      public  string LineaSQL;
+      public  string LineaSQL = "LineaSQL";
 
-      public string MacchineSQL;
+      public string MacchineSQL = "MacchineSQL";
 
-      public string RepartoSQL;
+      public string RepartoSQL = "RepartoSQL";
 
     }
 }

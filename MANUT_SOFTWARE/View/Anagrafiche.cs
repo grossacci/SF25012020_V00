@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MANUT_SOFTWARE.Service;
+using MANUT_SOFTWARE.ViewModels;
 
 namespace MANUT_SOFTWARE
 {
@@ -29,10 +30,25 @@ namespace MANUT_SOFTWARE
 
         private void btn_Salva_Reparto_Click(object sender, EventArgs e)
         {
-            SQLServiceLinea InsertLinea = new SQLServiceLinea();
+            SQLServiceReparto RepartoSQL = new SQLServiceReparto();
 
-            InsertLinea.Insert_INTO(textBox22.Text, textBox21.Text);
-         
+                List<RepartoViewModel> LP =  RepartoSQL.RepartoSQL_SELECT();
+
+                List<RepartoViewModel> LPF= LP
+                .Where(p => p.Nome.Contains(textBox21.Text)).Select(p => new RepartoViewModel
+                {
+                    ID = p.ID,
+                    Codice = p.Codice,
+                    Nome = p.Nome
+                }).ToList();
+            if (LPF.Any())
+            {
+                MessageBox.Show("Hai già inserito il dato!");
+                return;
+            }
+            RepartoSQL.Reparto_INSERT("REP-", textBox21.Text);
+            
+
 
 
         }
