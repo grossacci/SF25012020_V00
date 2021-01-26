@@ -31,7 +31,10 @@ namespace MANUT_SOFTWARE
         {
             SQLServiceLinea InsertLinea = new SQLServiceLinea();
 
-            InsertLinea.Insert_INTO("test", "Conf");
+            InsertLinea.Insert_INTO(textBox22.Text, textBox21.Text);
+         
+
+
         }
     }
 }
