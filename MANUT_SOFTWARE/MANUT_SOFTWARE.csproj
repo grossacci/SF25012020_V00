@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anagrafica_Service\SQLServiceNomeTabelle.cs" />
-    <Compile Include="Anagrafica_Service\SQLServiceMacchina.cs" />
-    <Compile Include="Anagrafica_Service\SQLServiceLinea.cs" />
-    <Compile Include="Anagrafica_Service\SQLServiceReparto.cs" />
+    <Compile Include="Anagrafica_Service\SQL\SQLServiceNomeTabelle.cs" />
+    <Compile Include="Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
+    <Compile Include="Anagrafica_Service\SQL\SQLServiceLinea.cs" />
+    <Compile Include="Anagrafica_Service\SQL\SQLServiceReparto.cs" />
     <Compile Include="SQLClass_ServiceConnect.cs" />
     <Compile Include="View\Anagrafiche.cs">
       <SubType>UserControl</SubType>
