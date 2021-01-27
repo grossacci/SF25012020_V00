@@ -27,13 +27,11 @@ namespace MANUT_SOFTWARE
             
             
         }
-
+        #region SALVA REPARTO
         private void btn_Salva_Reparto_Click(object sender, EventArgs e)
         {
-            SQLServiceReparto RepartoSQL = new SQLServiceReparto();
-
+                SQLServiceReparto RepartoSQL = new SQLServiceReparto();
                 List<RepartoViewModel> LP =  RepartoSQL.RepartoSQL_SELECT();
-
                 List<RepartoViewModel> LPF= LP
                 .Where(p => p.Nome.Contains(textBox21.Text)).Select(p => new RepartoViewModel
                 {
@@ -41,13 +39,37 @@ namespace MANUT_SOFTWARE
                     Codice = p.Codice,
                     Nome = p.Nome
                 }).ToList();
-            if (LPF.Any())
+             if (LPF.Any())
+                {
+                MessageBox.Show("Attenzione, Hai già inserito il reparto!","Attenzione",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+                }
+
+            RepartoSQL.RepartoSQL_INSERT("REP-", textBox21.Text);
+
+        }
+        #endregion
+
+        #region SALVA LINEA
+        private void btn_Salva_Linea_Click(object sender, EventArgs e)
+        {
+            SQLServiceLinea LineaSQL = new SQLServiceLinea();
+            List<LineaViewModel> LL = LineaSQL.LineaSQL_SELECT();
+            List<LineaViewModel> LLF = LL
+            .Where(p => p.Nome.Contains(textBox21.Text)).Select(p => new LineaViewModel
             {
-                MessageBox.Show("Hai già inserito il dato!");
+                ID = p.ID,
+                Codice = p.Codice,
+                Nome = p.Nome
+            }).ToList();
+            if (LLF.Any())
+            {
+                MessageBox.Show("Attenzione, Hai già inserito il reparto!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            RepartoSQL.Reparto_INSERT("REP-", textBox21.Text);
-            
+
+            LineaSQL.LineaSQL_INSERT("REP-", textBox21.Text);
         }
+        #endregion
     }
 }

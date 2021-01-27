@@ -94,7 +94,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Salva_Linea = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -754,25 +754,26 @@
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(88)))));
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
+            this.btn_Salva_Linea,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(146, 114);
+            this.menuStrip2.Size = new System.Drawing.Size(146, 133);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // toolStripMenuItem1
+            // btn_Salva_Linea
             // 
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(1);
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 25);
-            this.toolStripMenuItem1.Text = "Salva";
+            this.btn_Salva_Linea.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btn_Salva_Linea.ForeColor = System.Drawing.Color.White;
+            this.btn_Salva_Linea.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Salva_Linea.Name = "btn_Salva_Linea";
+            this.btn_Salva_Linea.Size = new System.Drawing.Size(137, 25);
+            this.btn_Salva_Linea.Text = "Salva";
+            this.btn_Salva_Linea.Click += new System.EventHandler(this.btn_Salva_Linea_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -934,7 +935,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btn_Salva_Linea;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
