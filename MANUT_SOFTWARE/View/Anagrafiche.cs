@@ -48,9 +48,6 @@ namespace MANUT_SOFTWARE
             }
             RepartoSQL.Reparto_INSERT("REP-", textBox21.Text);
             
-
-
-
         }
     }
 }
