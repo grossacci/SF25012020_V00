@@ -30,23 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMacchina_Lin = new System.Windows.Forms.ComboBox();
+            this.cbMacchina_Rep = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txMacchina_AnnoDiCostr = new System.Windows.Forms.TextBox();
+            this.txMacchina_Matric = new System.Windows.Forms.TextBox();
+            this.txMacchina_Mod = new System.Windows.Forms.TextBox();
+            this.txMacchina_Verific = new System.Windows.Forms.TextBox();
+            this.txMacchina_Manut = new System.Windows.Forms.TextBox();
+            this.txMacchina_Tarat = new System.Windows.Forms.TextBox();
+            this.txMacchina_Denom = new System.Windows.Forms.TextBox();
+            this.txMacchina_DataArr = new System.Windows.Forms.TextBox();
+            this.txMacchina_Forn = new System.Windows.Forms.TextBox();
+            this.txMacchina_Cod = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,19 +51,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txReparto_Nom = new System.Windows.Forms.TextBox();
+            this.txReparto_Cod = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txLinea_Nom = new System.Windows.Forms.TextBox();
+            this.txLinea_Cod = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -74,7 +70,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.salvaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Salva_Macchina = new System.Windows.Forms.ToolStripMenuItem();
             this.cercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,6 +96,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
+            this.cbMacchine_Dism = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,23 +120,21 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbMacchine_Dism);
+            this.groupBox1.Controls.Add(this.cbMacchina_Lin);
+            this.groupBox1.Controls.Add(this.cbMacchina_Rep);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txMacchina_AnnoDiCostr);
+            this.groupBox1.Controls.Add(this.txMacchina_Matric);
+            this.groupBox1.Controls.Add(this.txMacchina_Mod);
+            this.groupBox1.Controls.Add(this.txMacchina_Verific);
+            this.groupBox1.Controls.Add(this.txMacchina_Manut);
+            this.groupBox1.Controls.Add(this.txMacchina_Tarat);
+            this.groupBox1.Controls.Add(this.txMacchina_Denom);
+            this.groupBox1.Controls.Add(this.txMacchina_DataArr);
+            this.groupBox1.Controls.Add(this.txMacchina_Forn);
+            this.groupBox1.Controls.Add(this.txMacchina_Cod);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -147,7 +142,6 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -161,21 +155,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dettagli Macchina";
             // 
-            // comboBox2
+            // cbMacchina_Lin
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(225, 609);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(232, 28);
-            this.comboBox2.TabIndex = 32;
+            this.cbMacchina_Lin.FormattingEnabled = true;
+            this.cbMacchina_Lin.Location = new System.Drawing.Point(225, 609);
+            this.cbMacchina_Lin.Name = "cbMacchina_Lin";
+            this.cbMacchina_Lin.Size = new System.Drawing.Size(232, 28);
+            this.cbMacchina_Lin.TabIndex = 32;
             // 
-            // comboBox1
+            // cbMacchina_Rep
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 567);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
-            this.comboBox1.TabIndex = 31;
+            this.cbMacchina_Rep.FormattingEnabled = true;
+            this.cbMacchina_Rep.Location = new System.Drawing.Point(225, 567);
+            this.cbMacchina_Rep.Name = "cbMacchina_Rep";
+            this.cbMacchina_Rep.Size = new System.Drawing.Size(232, 28);
+            this.cbMacchina_Rep.TabIndex = 31;
             // 
             // label14
             // 
@@ -195,102 +189,75 @@
             this.label13.TabIndex = 28;
             this.label13.Text = "Reparto";
             // 
-            // checkBox2
+            // txMacchina_AnnoDiCostr
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(353, 396);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(48, 24);
-            this.checkBox2.TabIndex = 26;
-            this.checkBox2.Text = "No";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.txMacchina_AnnoDiCostr.Location = new System.Drawing.Point(225, 526);
+            this.txMacchina_AnnoDiCostr.Name = "txMacchina_AnnoDiCostr";
+            this.txMacchina_AnnoDiCostr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_AnnoDiCostr.TabIndex = 24;
             // 
-            // checkBox1
+            // txMacchina_Matric
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(274, 396);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(42, 24);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Si";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.txMacchina_Matric.Location = new System.Drawing.Point(225, 482);
+            this.txMacchina_Matric.Name = "txMacchina_Matric";
+            this.txMacchina_Matric.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Matric.TabIndex = 23;
             // 
-            // textBox12
+            // txMacchina_Mod
             // 
-            this.textBox12.Location = new System.Drawing.Point(225, 526);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(232, 26);
-            this.textBox12.TabIndex = 24;
+            this.txMacchina_Mod.Location = new System.Drawing.Point(225, 438);
+            this.txMacchina_Mod.Name = "txMacchina_Mod";
+            this.txMacchina_Mod.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Mod.TabIndex = 22;
             // 
-            // textBox11
+            // txMacchina_Verific
             // 
-            this.textBox11.Location = new System.Drawing.Point(225, 482);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(232, 26);
-            this.textBox11.TabIndex = 23;
+            this.txMacchina_Verific.Location = new System.Drawing.Point(225, 350);
+            this.txMacchina_Verific.Name = "txMacchina_Verific";
+            this.txMacchina_Verific.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Verific.TabIndex = 20;
             // 
-            // textBox10
+            // txMacchina_Manut
             // 
-            this.textBox10.Location = new System.Drawing.Point(225, 438);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(232, 26);
-            this.textBox10.TabIndex = 22;
+            this.txMacchina_Manut.Location = new System.Drawing.Point(225, 306);
+            this.txMacchina_Manut.Name = "txMacchina_Manut";
+            this.txMacchina_Manut.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Manut.TabIndex = 19;
             // 
-            // textBox8
+            // txMacchina_Tarat
             // 
-            this.textBox8.Location = new System.Drawing.Point(225, 350);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(232, 26);
-            this.textBox8.TabIndex = 20;
+            this.txMacchina_Tarat.Location = new System.Drawing.Point(225, 262);
+            this.txMacchina_Tarat.Name = "txMacchina_Tarat";
+            this.txMacchina_Tarat.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Tarat.TabIndex = 18;
             // 
-            // textBox7
+            // txMacchina_Denom
             // 
-            this.textBox7.Location = new System.Drawing.Point(225, 306);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(232, 26);
-            this.textBox7.TabIndex = 19;
+            this.txMacchina_Denom.Location = new System.Drawing.Point(225, 174);
+            this.txMacchina_Denom.Name = "txMacchina_Denom";
+            this.txMacchina_Denom.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Denom.TabIndex = 16;
             // 
-            // textBox6
+            // txMacchina_DataArr
             // 
-            this.textBox6.Location = new System.Drawing.Point(225, 262);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(232, 26);
-            this.textBox6.TabIndex = 18;
+            this.txMacchina_DataArr.Location = new System.Drawing.Point(225, 130);
+            this.txMacchina_DataArr.Name = "txMacchina_DataArr";
+            this.txMacchina_DataArr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_DataArr.TabIndex = 15;
             // 
-            // textBox5
+            // txMacchina_Forn
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 218);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(232, 26);
-            this.textBox5.TabIndex = 17;
+            this.txMacchina_Forn.Location = new System.Drawing.Point(225, 86);
+            this.txMacchina_Forn.Name = "txMacchina_Forn";
+            this.txMacchina_Forn.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Forn.TabIndex = 14;
             // 
-            // textBox4
+            // txMacchina_Cod
             // 
-            this.textBox4.Location = new System.Drawing.Point(225, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 26);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(225, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 26);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(225, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 26);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(225, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 26);
-            this.textBox1.TabIndex = 13;
+            this.txMacchina_Cod.Location = new System.Drawing.Point(225, 42);
+            this.txMacchina_Cod.Name = "txMacchina_Cod";
+            this.txMacchina_Cod.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_Cod.TabIndex = 13;
             // 
             // label12
             // 
@@ -355,15 +322,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Taratura [Per/Cor]";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Collocazione";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -403,8 +361,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.textBox21);
-            this.groupBox2.Controls.Add(this.textBox22);
+            this.groupBox2.Controls.Add(this.txReparto_Nom);
+            this.groupBox2.Controls.Add(this.txReparto_Cod);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -416,20 +374,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dettagli Reparto";
             // 
-            // textBox21
+            // txReparto_Nom
             // 
-            this.textBox21.Location = new System.Drawing.Point(225, 86);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(232, 26);
-            this.textBox21.TabIndex = 14;
+            this.txReparto_Nom.Location = new System.Drawing.Point(225, 86);
+            this.txReparto_Nom.Name = "txReparto_Nom";
+            this.txReparto_Nom.Size = new System.Drawing.Size(232, 26);
+            this.txReparto_Nom.TabIndex = 14;
             // 
-            // textBox22
+            // txReparto_Cod
             // 
-            this.textBox22.Location = new System.Drawing.Point(225, 42);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(232, 26);
-            this.textBox22.TabIndex = 13;
+            this.txReparto_Cod.Location = new System.Drawing.Point(225, 42);
+            this.txReparto_Cod.Name = "txReparto_Cod";
+            this.txReparto_Cod.ReadOnly = true;
+            this.txReparto_Cod.Size = new System.Drawing.Size(232, 26);
+            this.txReparto_Cod.TabIndex = 13;
             // 
             // label27
             // 
@@ -452,8 +410,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.txLinea_Nom);
+            this.groupBox3.Controls.Add(this.txLinea_Cod);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -465,19 +423,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dettagli Linea";
             // 
-            // textBox9
+            // txLinea_Nom
             // 
-            this.textBox9.Location = new System.Drawing.Point(225, 86);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(232, 26);
-            this.textBox9.TabIndex = 14;
+            this.txLinea_Nom.Location = new System.Drawing.Point(225, 86);
+            this.txLinea_Nom.Name = "txLinea_Nom";
+            this.txLinea_Nom.Size = new System.Drawing.Size(232, 26);
+            this.txLinea_Nom.TabIndex = 14;
             // 
-            // textBox13
+            // txLinea_Cod
             // 
-            this.textBox13.Location = new System.Drawing.Point(225, 42);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(232, 26);
-            this.textBox13.TabIndex = 13;
+            this.txLinea_Cod.Location = new System.Drawing.Point(225, 42);
+            this.txLinea_Cod.Name = "txLinea_Cod";
+            this.txLinea_Cod.ReadOnly = true;
+            this.txLinea_Cod.Size = new System.Drawing.Size(232, 26);
+            this.txLinea_Cod.TabIndex = 13;
             // 
             // label15
             // 
@@ -540,7 +499,7 @@
             // 
             this.menuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(88)))));
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvaToolStripMenuItem,
+            this.btn_Salva_Macchina,
             this.cercaToolStripMenuItem,
             this.modificaToolStripMenuItem,
             this.eliminaToolStripMenuItem});
@@ -551,14 +510,15 @@
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
-            // salvaToolStripMenuItem
+            // btn_Salva_Macchina
             // 
-            this.salvaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.salvaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salvaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
-            this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(133, 25);
-            this.salvaToolStripMenuItem.Text = "Salva";
+            this.btn_Salva_Macchina.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btn_Salva_Macchina.ForeColor = System.Drawing.Color.White;
+            this.btn_Salva_Macchina.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Salva_Macchina.Name = "btn_Salva_Macchina";
+            this.btn_Salva_Macchina.Size = new System.Drawing.Size(133, 25);
+            this.btn_Salva_Macchina.Text = "Salva";
+            this.btn_Salva_Macchina.Click += new System.EventHandler(this.btn_Salva_Macchina_Click);
             // 
             // cercaToolStripMenuItem
             // 
@@ -761,7 +721,7 @@
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(146, 133);
+            this.menuStrip2.Size = new System.Drawing.Size(146, 114);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -824,6 +784,14 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Dettagli";
             // 
+            // cbMacchine_Dism
+            // 
+            this.cbMacchine_Dism.FormattingEnabled = true;
+            this.cbMacchine_Dism.Location = new System.Drawing.Point(225, 394);
+            this.cbMacchine_Dism.Name = "cbMacchine_Dism";
+            this.cbMacchine_Dism.Size = new System.Drawing.Size(232, 28);
+            this.cbMacchine_Dism.TabIndex = 33;
+            // 
             // AnagraficaMacchine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -869,23 +837,20 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMacchina_Lin;
+        private System.Windows.Forms.ComboBox cbMacchina_Rep;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txMacchina_AnnoDiCostr;
+        private System.Windows.Forms.TextBox txMacchina_Matric;
+        private System.Windows.Forms.TextBox txMacchina_Mod;
+        private System.Windows.Forms.TextBox txMacchina_Verific;
+        private System.Windows.Forms.TextBox txMacchina_Manut;
+        private System.Windows.Forms.TextBox txMacchina_Tarat;
+        private System.Windows.Forms.TextBox txMacchina_Denom;
+        private System.Windows.Forms.TextBox txMacchina_DataArr;
+        private System.Windows.Forms.TextBox txMacchina_Forn;
+        private System.Windows.Forms.TextBox txMacchina_Cod;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -893,19 +858,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txReparto_Nom;
+        private System.Windows.Forms.TextBox txReparto_Cod;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txLinea_Nom;
+        private System.Windows.Forms.TextBox txLinea_Cod;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -918,7 +882,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.MenuStrip menuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem salvaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btn_Salva_Macchina;
         private System.Windows.Forms.ToolStripMenuItem cercaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminaToolStripMenuItem;
@@ -939,5 +903,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ComboBox cbMacchine_Dism;
     }
 }

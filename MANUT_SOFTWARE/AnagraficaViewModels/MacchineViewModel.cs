@@ -12,9 +12,9 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public int ID { get; set; }
 
-        public int Identificativo { get; set; }
-
         public string Codice { get; set; }
+
+        public string Fornitore { get; set; }
 
         public DateTime DataArrivo { get; set; }
 
@@ -30,7 +30,7 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public string Verifica { get; set; }
 
-        public bool Dismissione { get; set; }
+        public string Dismissione { get; set; }
 
         public string Modello { get; set; }
 
@@ -38,7 +38,7 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public DateTime AnnoDiCostruzione { get; set; }
 
-        public Image  Immagine { get; set; }   //da verificare formato!!
+        // public Image  Immagine { get; set; }   //da verificare formato!!
 
     }
 }
