@@ -15,7 +15,7 @@ namespace MANUT_SOFTWARE.Service
         {
 
             MacchineViewModel Macchina = new MacchineViewModel();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             string query = "INSERT INTO " + Manutenzione.MacchineSQL+" ("+ nameof(Macchina.Codice)+"," + nameof(Macchina.Fornitore) + "," + nameof(Macchina.DataArrivo)+ " "+ nameof(Macchina.Denominazione) + "," + nameof(Macchina.Reparto) + " " + nameof(Macchina.Linea) + "," + nameof(Macchina.Taratura) + " " + nameof(Macchina.Manutenzione) + "," + nameof(Macchina.Verifica) + " " + nameof(Macchina.Dismissione) + "," + nameof(Macchina.Modello) + "," + nameof(Macchina.Matricola) + "," + nameof(Macchina.AnnoDiCostruzione) + ") VALUES(@Codice, @DataArrivo,@Denominazione,@Reparto,@Linea,@Taratura,@Manutenzione,@Verifica,@Dismissione,@Modello,@Matricola,@AnnoDiCostruzione)";
             SqlCommand cmd = new SqlCommand(query,Open());
@@ -58,7 +58,7 @@ namespace MANUT_SOFTWARE.Service
 
             List<MacchineViewModel> LM = new List<MacchineViewModel>();
             DataTable dr = new DataTable();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             using (SqlCommand command = new SqlCommand("SELECT* FROM " + Manutenzione.MacchineSQL, Open()))
             {

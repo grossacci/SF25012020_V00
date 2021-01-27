@@ -15,7 +15,7 @@ namespace MANUT_SOFTWARE.Service
         {
 
             LineaViewModel Linea = new LineaViewModel();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             string query = "INSERT INTO " + Manutenzione.LineaSQL+" ("+ nameof(Linea.Codice)+"," + nameof(Linea.Nome)+") VALUES(@Codice, @Nome)";
             SqlCommand cmd = new SqlCommand(query,Open());
@@ -46,7 +46,7 @@ namespace MANUT_SOFTWARE.Service
 
             List<LineaViewModel> LL = new List<LineaViewModel>();
             DataTable dr = new DataTable();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             using (SqlCommand command = new SqlCommand("SELECT* FROM " + Manutenzione.LineaSQL, Open()))
             {

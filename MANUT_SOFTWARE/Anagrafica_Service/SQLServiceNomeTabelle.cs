@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MANUT_SOFTWARE.Service
 {
-    class NomeTabelle
+    class SQLServiceNomeTabelle
     {
       public  string LineaSQL = "LineaSQL";
 
