@@ -12,11 +12,7 @@ namespace MANUT_SOFTWARE
     {
 
         public SqlConnection cnn;
-        public List<NomeTabelle> _NomeTabelle = new List<NomeTabelle>
-        {
-            
-        };
-
+      
         
 
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceNomeTabelle.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceLinea.cs" />

@@ -80,6 +80,7 @@
             this.anagraficaMacchine1.Name = "anagraficaMacchine1";
             this.anagraficaMacchine1.Size = new System.Drawing.Size(1216, 608);
             this.anagraficaMacchine1.TabIndex = 0;
+            this.anagraficaMacchine1.Load += new System.EventHandler(this.anagraficaMacchine1_Load);
             // 
             // Form1
             // 

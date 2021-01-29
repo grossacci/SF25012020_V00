@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MANUT_SOFTWARE.Service;
 using MANUT_SOFTWARE.ViewModels;
+using MANUT_SOFTWARE.Anagrafica_Service;
 
 namespace MANUT_SOFTWARE
 {
@@ -88,8 +89,21 @@ namespace MANUT_SOFTWARE
                
                     MacchinaSQL.MacchinaSQL_INSERT("MAC-", txMacchina_Cod.Text, Convert.ToDateTime(txMacchina_DataArr.Text), txMacchina_Denom.Text, cbMacchina_Rep.Text, cbMacchina_Lin.Text, txMacchina_Tarat.Text, txMacchina_Manut.Text, txMacchina_Verific.Text, cbMacchine_Dism.Text , txMacchina_Mod.Text, txMacchina_Matric.Text, Convert.ToDateTime(txMacchina_AnnoDiCostr));
                 
-                  
             }
         }
+
+
+
+        #region CARICAMENTO DEI CB
+        public void CaricaCbMacchine_Dismiss()
+        {
+                ComboBoxService Cb = new ComboBoxService();
+                foreach(string str in Cb.CboxDismissione)
+                cbMacchine_Dism.Items.Add(str);
+                cbMacchina_Rep.SelectedValue = 1; 
+        
+        }
+        #endregion
+
     }
 }

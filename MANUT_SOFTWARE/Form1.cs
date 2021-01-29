@@ -16,5 +16,11 @@ namespace MANUT_SOFTWARE
         {
             InitializeComponent();
         }
+
+        private void anagraficaMacchine1_Load(object sender, EventArgs e)
+        {
+            anagraficaMacchine1.CaricaCbMacchine_Dismiss();
+
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace MANUT_SOFTWARE.Service
         {
 
             RepartoViewModel Reparto = new RepartoViewModel();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             string query = "INSERT INTO " + Manutenzione.RepartoSQL+" ("+ nameof(Reparto.Codice)+"," + nameof(Reparto.Nome)+") VALUES(@Codice, @Nome)";
             SqlCommand cmd = new SqlCommand(query,Open());
@@ -46,7 +46,7 @@ namespace MANUT_SOFTWARE.Service
 
             List<RepartoViewModel> LP = new List<RepartoViewModel>();
             DataTable dr = new DataTable();
-            NomeTabelle Manutenzione = new NomeTabelle();
+            SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
             using (SqlCommand command = new SqlCommand("SELECT* FROM " + Manutenzione.RepartoSQL, Open()))
             {
