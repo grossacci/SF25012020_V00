@@ -14,7 +14,7 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public string Nome { get; set; }
 
-
+        public string RepartoAssociato { get; set; }
 
     }
 }

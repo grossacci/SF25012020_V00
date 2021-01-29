@@ -30,18 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMacchine_Dism = new System.Windows.Forms.ComboBox();
             this.cbMacchina_Lin = new System.Windows.Forms.ComboBox();
             this.cbMacchina_Rep = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txMacchina_AnnoDiCostr = new System.Windows.Forms.TextBox();
             this.txMacchina_Matric = new System.Windows.Forms.TextBox();
             this.txMacchina_Mod = new System.Windows.Forms.TextBox();
             this.txMacchina_Verific = new System.Windows.Forms.TextBox();
             this.txMacchina_Manut = new System.Windows.Forms.TextBox();
             this.txMacchina_Tarat = new System.Windows.Forms.TextBox();
             this.txMacchina_Denom = new System.Windows.Forms.TextBox();
-            this.txMacchina_DataArr = new System.Windows.Forms.TextBox();
             this.txMacchina_Forn = new System.Windows.Forms.TextBox();
             this.txMacchina_Cod = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -96,7 +95,10 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.cbMacchine_Dism = new System.Windows.Forms.ComboBox();
+            this.txMacchina_DataArr = new System.Windows.Forms.TextBox();
+            this.txMacchina_AndiCostr = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbLinea_RepAss = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -120,19 +122,19 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.txMacchina_AndiCostr);
+            this.groupBox1.Controls.Add(this.txMacchina_DataArr);
             this.groupBox1.Controls.Add(this.cbMacchine_Dism);
             this.groupBox1.Controls.Add(this.cbMacchina_Lin);
             this.groupBox1.Controls.Add(this.cbMacchina_Rep);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txMacchina_AnnoDiCostr);
             this.groupBox1.Controls.Add(this.txMacchina_Matric);
             this.groupBox1.Controls.Add(this.txMacchina_Mod);
             this.groupBox1.Controls.Add(this.txMacchina_Verific);
             this.groupBox1.Controls.Add(this.txMacchina_Manut);
             this.groupBox1.Controls.Add(this.txMacchina_Tarat);
             this.groupBox1.Controls.Add(this.txMacchina_Denom);
-            this.groupBox1.Controls.Add(this.txMacchina_DataArr);
             this.groupBox1.Controls.Add(this.txMacchina_Forn);
             this.groupBox1.Controls.Add(this.txMacchina_Cod);
             this.groupBox1.Controls.Add(this.label12);
@@ -155,13 +157,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dettagli Macchina";
             // 
+            // cbMacchine_Dism
+            // 
+            this.cbMacchine_Dism.FormattingEnabled = true;
+            this.cbMacchine_Dism.Location = new System.Drawing.Point(225, 394);
+            this.cbMacchine_Dism.Name = "cbMacchine_Dism";
+            this.cbMacchine_Dism.Size = new System.Drawing.Size(232, 28);
+            this.cbMacchine_Dism.TabIndex = 21;
+            // 
             // cbMacchina_Lin
             // 
             this.cbMacchina_Lin.FormattingEnabled = true;
             this.cbMacchina_Lin.Location = new System.Drawing.Point(225, 609);
             this.cbMacchina_Lin.Name = "cbMacchina_Lin";
             this.cbMacchina_Lin.Size = new System.Drawing.Size(232, 28);
-            this.cbMacchina_Lin.TabIndex = 32;
+            this.cbMacchina_Lin.TabIndex = 26;
             // 
             // cbMacchina_Rep
             // 
@@ -169,7 +179,8 @@
             this.cbMacchina_Rep.Location = new System.Drawing.Point(225, 567);
             this.cbMacchina_Rep.Name = "cbMacchina_Rep";
             this.cbMacchina_Rep.Size = new System.Drawing.Size(232, 28);
-            this.cbMacchina_Rep.TabIndex = 31;
+            this.cbMacchina_Rep.TabIndex = 25;
+            this.cbMacchina_Rep.SelectedIndexChanged += new System.EventHandler(this.cbMacchina_Rep_SelectedIndexChanged_1);
             // 
             // label14
             // 
@@ -188,13 +199,6 @@
             this.label13.Size = new System.Drawing.Size(67, 20);
             this.label13.TabIndex = 28;
             this.label13.Text = "Reparto";
-            // 
-            // txMacchina_AnnoDiCostr
-            // 
-            this.txMacchina_AnnoDiCostr.Location = new System.Drawing.Point(225, 526);
-            this.txMacchina_AnnoDiCostr.Name = "txMacchina_AnnoDiCostr";
-            this.txMacchina_AnnoDiCostr.Size = new System.Drawing.Size(232, 26);
-            this.txMacchina_AnnoDiCostr.TabIndex = 24;
             // 
             // txMacchina_Matric
             // 
@@ -238,13 +242,6 @@
             this.txMacchina_Denom.Size = new System.Drawing.Size(232, 26);
             this.txMacchina_Denom.TabIndex = 16;
             // 
-            // txMacchina_DataArr
-            // 
-            this.txMacchina_DataArr.Location = new System.Drawing.Point(225, 130);
-            this.txMacchina_DataArr.Name = "txMacchina_DataArr";
-            this.txMacchina_DataArr.Size = new System.Drawing.Size(232, 26);
-            this.txMacchina_DataArr.TabIndex = 15;
-            // 
             // txMacchina_Forn
             // 
             this.txMacchina_Forn.Location = new System.Drawing.Point(225, 86);
@@ -256,6 +253,7 @@
             // 
             this.txMacchina_Cod.Location = new System.Drawing.Point(225, 42);
             this.txMacchina_Cod.Name = "txMacchina_Cod";
+            this.txMacchina_Cod.ReadOnly = true;
             this.txMacchina_Cod.Size = new System.Drawing.Size(232, 26);
             this.txMacchina_Cod.TabIndex = 13;
             // 
@@ -379,7 +377,7 @@
             this.txReparto_Nom.Location = new System.Drawing.Point(225, 86);
             this.txReparto_Nom.Name = "txReparto_Nom";
             this.txReparto_Nom.Size = new System.Drawing.Size(232, 26);
-            this.txReparto_Nom.TabIndex = 14;
+            this.txReparto_Nom.TabIndex = 27;
             // 
             // txReparto_Cod
             // 
@@ -410,6 +408,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.cbLinea_RepAss);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txLinea_Nom);
             this.groupBox3.Controls.Add(this.txLinea_Cod);
             this.groupBox3.Controls.Add(this.label15);
@@ -418,7 +418,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox3.Location = new System.Drawing.Point(120, 153);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(515, 153);
+            this.groupBox3.Size = new System.Drawing.Size(515, 193);
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dettagli Linea";
@@ -428,7 +428,7 @@
             this.txLinea_Nom.Location = new System.Drawing.Point(225, 86);
             this.txLinea_Nom.Name = "txLinea_Nom";
             this.txLinea_Nom.Size = new System.Drawing.Size(232, 26);
-            this.txLinea_Nom.TabIndex = 14;
+            this.txLinea_Nom.TabIndex = 28;
             // 
             // txLinea_Cod
             // 
@@ -784,13 +784,36 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Dettagli";
             // 
-            // cbMacchine_Dism
+            // txMacchina_DataArr
             // 
-            this.cbMacchine_Dism.FormattingEnabled = true;
-            this.cbMacchine_Dism.Location = new System.Drawing.Point(225, 394);
-            this.cbMacchine_Dism.Name = "cbMacchine_Dism";
-            this.cbMacchine_Dism.Size = new System.Drawing.Size(232, 28);
-            this.cbMacchine_Dism.TabIndex = 33;
+            this.txMacchina_DataArr.Location = new System.Drawing.Point(225, 130);
+            this.txMacchina_DataArr.Name = "txMacchina_DataArr";
+            this.txMacchina_DataArr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_DataArr.TabIndex = 15;
+            // 
+            // txMacchina_AndiCostr
+            // 
+            this.txMacchina_AndiCostr.Location = new System.Drawing.Point(225, 526);
+            this.txMacchina_AndiCostr.Name = "txMacchina_AndiCostr";
+            this.txMacchina_AndiCostr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_AndiCostr.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(141, 20);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Reparto Associato";
+            // 
+            // cbLinea_RepAss
+            // 
+            this.cbLinea_RepAss.FormattingEnabled = true;
+            this.cbLinea_RepAss.Location = new System.Drawing.Point(225, 130);
+            this.cbLinea_RepAss.Name = "cbLinea_RepAss";
+            this.cbLinea_RepAss.Size = new System.Drawing.Size(232, 28);
+            this.cbLinea_RepAss.TabIndex = 31;
             // 
             // AnagraficaMacchine
             // 
@@ -841,14 +864,12 @@
         private System.Windows.Forms.ComboBox cbMacchina_Rep;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txMacchina_AnnoDiCostr;
         private System.Windows.Forms.TextBox txMacchina_Matric;
         private System.Windows.Forms.TextBox txMacchina_Mod;
         private System.Windows.Forms.TextBox txMacchina_Verific;
         private System.Windows.Forms.TextBox txMacchina_Manut;
         private System.Windows.Forms.TextBox txMacchina_Tarat;
         private System.Windows.Forms.TextBox txMacchina_Denom;
-        private System.Windows.Forms.TextBox txMacchina_DataArr;
         private System.Windows.Forms.TextBox txMacchina_Forn;
         private System.Windows.Forms.TextBox txMacchina_Cod;
         private System.Windows.Forms.Label label12;
@@ -904,5 +925,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ComboBox cbMacchine_Dism;
+        private System.Windows.Forms.TextBox txMacchina_AndiCostr;
+        private System.Windows.Forms.TextBox txMacchina_DataArr;
+        private System.Windows.Forms.ComboBox cbLinea_RepAss;
+        private System.Windows.Forms.Label label5;
     }
 }

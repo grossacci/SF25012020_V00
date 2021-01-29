@@ -11,13 +11,13 @@ namespace MANUT_SOFTWARE.Service
 {
     class SQLServiceMacchina : SQLClass_ServiceConnect
     {
-        public void MacchinaSQL_INSERT(string Codice, string Fornitore ,DateTime DataArrivo, string Denominazione, string Reparto, string Linea, string Taratura, string _Manutenzione, string Verifica, string Dismissione, string Modello, string Matricola, DateTime AnnoDiCostruzione)
+        public void MacchinaSQL_INSERT(string Codice, string Fornitore ,int DataArrivo, string Denominazione, string Reparto, string Linea, string Taratura, string _Manutenzione, string Verifica, string Dismissione, string Modello, string Matricola, int AnnoDiCostruzione)
         {
 
             MacchineViewModel Macchina = new MacchineViewModel();
             SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
-            string query = "INSERT INTO " + Manutenzione.MacchineSQL+" ("+ nameof(Macchina.Codice)+"," + nameof(Macchina.Fornitore) + "," + nameof(Macchina.DataArrivo)+ " "+ nameof(Macchina.Denominazione) + "," + nameof(Macchina.Reparto) + " " + nameof(Macchina.Linea) + "," + nameof(Macchina.Taratura) + " " + nameof(Macchina.Manutenzione) + "," + nameof(Macchina.Verifica) + " " + nameof(Macchina.Dismissione) + "," + nameof(Macchina.Modello) + "," + nameof(Macchina.Matricola) + "," + nameof(Macchina.AnnoDiCostruzione) + ") VALUES(@Codice, @DataArrivo,@Denominazione,@Reparto,@Linea,@Taratura,@Manutenzione,@Verifica,@Dismissione,@Modello,@Matricola,@AnnoDiCostruzione)";
+            string query = "INSERT INTO " + Manutenzione.MacchineSQL.ToString() +" ("+ nameof(Macchina.Codice)+"," + nameof(Macchina.Fornitore) + "," + nameof(Macchina.DataArrivo)+ ","+ nameof(Macchina.Denominazione) + "," + nameof(Macchina.Reparto) + "," + nameof(Macchina.Linea) + "," + nameof(Macchina.Taratura) + "," + nameof(Macchina.Manutenzione) + "," + nameof(Macchina.Verifica) + "," + nameof(Macchina.Dismissione) + "," + nameof(Macchina.Modello) + "," + nameof(Macchina.Matricola) + "," + nameof(Macchina.AnnoDiCostruzione) + ") VALUES(@Codice,@Fornitore, @DataArrivo,@Denominazione,@Reparto,@Linea,@Taratura,@Manutenzione,@Verifica,@Dismissione,@Modello,@Matricola,@AnnoDiCostruzione)";
             SqlCommand cmd = new SqlCommand(query,Open());
 
             //Pass values to Parameters
@@ -28,7 +28,7 @@ namespace MANUT_SOFTWARE.Service
             cmd.Parameters.AddWithValue("@Reparto", Reparto);
             cmd.Parameters.AddWithValue("@Linea", Linea);
             cmd.Parameters.AddWithValue("@Taratura", Taratura);
-            cmd.Parameters.AddWithValue("@Manutenzione", Manutenzione);
+            cmd.Parameters.AddWithValue("@Manutenzione", _Manutenzione);
             cmd.Parameters.AddWithValue("@Verifica", Verifica);
             cmd.Parameters.AddWithValue("@Dismissione", Dismissione);
             cmd.Parameters.AddWithValue("@Modello", Modello);
@@ -72,7 +72,7 @@ namespace MANUT_SOFTWARE.Service
                         M.ID = (Int32)reader["ID"];
                         M.Codice = reader["Codice"].ToString();
                         M.Fornitore= reader["Fornitore"].ToString();
-                        M.DataArrivo=(DateTime)reader["DataArrivo"];
+                        M.DataArrivo=(int)reader["DataArrivo"];
                         M.Denominazione= reader["Denominazione"].ToString();
                         M.Reparto = reader["Reparto"].ToString();
                         M.Linea = reader["Linea"].ToString();
@@ -82,7 +82,7 @@ namespace MANUT_SOFTWARE.Service
                         M.Dismissione= reader["Dismissione"].ToString();
                         M.Modello= reader["Modello"].ToString();
                         M.Matricola= reader["Matricola"].ToString();
-                        M.AnnoDiCostruzione= (DateTime)reader["AnnoDiCostruzione"];
+                        M.AnnoDiCostruzione= (int)reader["AnnoDiCostruzione"];
                         LM.Add(M);
 
 

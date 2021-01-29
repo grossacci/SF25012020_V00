@@ -25,6 +25,8 @@ namespace MANUT_SOFTWARE
         {
             
         }
+
+
         #region SALVA REPARTO
         private void btn_Salva_Reparto_Click(object sender, EventArgs e)
         {
@@ -44,7 +46,7 @@ namespace MANUT_SOFTWARE
                 }
 
             RepartoSQL.RepartoSQL_INSERT("REP-", txReparto_Nom.Text);
-
+            CaricaCbMacchine_Reparto();
         }
         #endregion
 
@@ -54,7 +56,7 @@ namespace MANUT_SOFTWARE
             SQLServiceLinea LineaSQL = new SQLServiceLinea();
             List<LineaViewModel> LL = LineaSQL.LineaSQL_SELECT();
             List<LineaViewModel> LLF = LL
-            .Where(p => p.Nome == (txReparto_Nom.Text)).Select(p => new LineaViewModel
+            .Where(p => p.Nome == (txLinea_Nom.Text)).Select(p => new LineaViewModel
             {
                 ID = p.ID,
                 Codice = p.Codice,
@@ -65,11 +67,23 @@ namespace MANUT_SOFTWARE
                 MessageBox.Show("Attenzione, Hai già inserito il reparto!", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            SQLServiceReparto SQLService = new SQLServiceReparto();
+            List<RepartoViewModel> R = new List<RepartoViewModel>();
+            R = SQLService.RepartoSQL_SELECT()
+                .Where(P => P.Nome.Contains(cbLinea_RepAss.Text.Remove(0,7)))
+                .Select(P => new RepartoViewModel
+            {
+                Codice = P.Codice,
+                ID = P.ID
 
-            LineaSQL.LineaSQL_INSERT("LIN-", txLinea_Nom.Text);
+            }).ToList();
+            foreach(RepartoViewModel r in R)
+            LineaSQL.LineaSQL_INSERT("LIN-", txLinea_Nom.Text,r.Codice+r.ID);
+            CaricaCbMacchine_Linea();
         }
         #endregion
-
+        
+        #region SALVA MACCHINA
         private void btn_Salva_Macchina_Click(object sender, EventArgs e)
         {
             SQLServiceMacchina MacchinaSQL= new SQLServiceMacchina();
@@ -87,23 +101,96 @@ namespace MANUT_SOFTWARE
             }
             {
                
-                    MacchinaSQL.MacchinaSQL_INSERT("MAC-", txMacchina_Cod.Text, Convert.ToDateTime(txMacchina_DataArr.Text), txMacchina_Denom.Text, cbMacchina_Rep.Text, cbMacchina_Lin.Text, txMacchina_Tarat.Text, txMacchina_Manut.Text, txMacchina_Verific.Text, cbMacchine_Dism.Text , txMacchina_Mod.Text, txMacchina_Matric.Text, Convert.ToDateTime(txMacchina_AnnoDiCostr));
+                    MacchinaSQL.MacchinaSQL_INSERT("MAC-" ,txMacchina_Forn.Text, Convert.ToInt32(txMacchina_DataArr.Text), txMacchina_Denom.Text, cbMacchina_Rep.Text.Remove(5), cbMacchina_Lin.Text.Remove(5), txMacchina_Tarat.Text, txMacchina_Manut.Text, txMacchina_Verific.Text, cbMacchine_Dism.Text , txMacchina_Mod.Text, txMacchina_Matric.Text, Convert.ToInt32(txMacchina_AndiCostr.Text));
                 
             }
         }
-
+        #endregion 
 
 
         #region CARICAMENTO DEI CB
+
+
+
         public void CaricaCbMacchine_Dismiss()
         {
-                ComboBoxService Cb = new ComboBoxService();
-                foreach(string str in Cb.CboxDismissione)
-                cbMacchine_Dism.Items.Add(str);
-                cbMacchina_Rep.SelectedValue = 1; 
-        
+                ComboBoxService C = new ComboBoxService();
+                foreach(string S in C.CboxDismissione)
+                cbMacchine_Dism.Items.Add(S);
+                cbMacchine_Dism.SelectedIndex = 0;
         }
+
+
+        public void CaricaCbMacchine_Reparto()
+        {
+            cbMacchina_Rep.Items.Clear();
+            ComboBoxService C = new ComboBoxService();
+            foreach (RepartoViewModel R in C.ServiceRepartoSELECT())
+            cbMacchina_Rep.Items.Add(R.Codice + R.ID + ": " + R.Nome);
+            try
+            {
+                cbMacchina_Rep.SelectedIndex = 0;
+            }
+            catch (ArgumentOutOfRangeException e)
+            { MessageBox.Show(e.ToString()); }
+          
+        }
+
+        private void cbMacchina_Rep_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            CaricaCbMacchine_Linea();
+        }
+
+
+
+        public void CaricaCbMacchine_RepartoAss()
+        {
+            cbLinea_RepAss.Items.Clear();
+            ComboBoxService C = new ComboBoxService();
+            foreach (RepartoViewModel R in C.ServiceRepartoSELECT())
+               cbLinea_RepAss.Items.Add(R.Codice + R.ID + ": " + R.Nome);
+            try
+            {
+                cbLinea_RepAss.SelectedIndex = 0;
+            }
+            catch (ArgumentOutOfRangeException e)
+            { MessageBox.Show(e.ToString()); }
+
+        }
+
+        public void CaricaCbMacchine_Linea()
+        {
+            cbMacchina_Lin.Items.Clear();
+
+            ComboBoxService C = new ComboBoxService();
+            SQLServiceReparto SQLService = new SQLServiceReparto();
+
+         
+            foreach (LineaViewModel L in C.ServiceLineaSELECT().Where(P => P.RepartoAssociato == cbMacchina_Rep.Text.Remove(5)).Select(P => new LineaViewModel { ID = P.ID, Codice = P.Codice, Nome = P.Nome, RepartoAssociato = P.RepartoAssociato }).ToList())
+            cbMacchina_Lin.Items.Add(L.Codice + L.ID + ": " + L.Nome);
+            if (cbMacchina_Lin.Items.Count > 0)
+            {
+                cbMacchina_Lin.Visible = true;
+                try
+                {
+                    cbMacchina_Lin.SelectedIndex = 0;
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
+            }
+
+            else if (cbMacchina_Lin.Items.Count == 0)
+            {
+                cbMacchina_Lin.Visible = false;
+            }
+        }
+
         #endregion
 
+      
+
+       
     }
 }

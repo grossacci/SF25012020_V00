@@ -20,7 +20,9 @@ namespace MANUT_SOFTWARE
         private void anagraficaMacchine1_Load(object sender, EventArgs e)
         {
             anagraficaMacchine1.CaricaCbMacchine_Dismiss();
-
+            anagraficaMacchine1.CaricaCbMacchine_Reparto();
+        //    anagraficaMacchine1.CaricaCbMacchine_Linea();
+            anagraficaMacchine1.CaricaCbMacchine_RepartoAss();
         }
     }
 }

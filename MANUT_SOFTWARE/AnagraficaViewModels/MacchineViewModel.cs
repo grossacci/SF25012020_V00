@@ -16,7 +16,7 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public string Fornitore { get; set; }
 
-        public DateTime DataArrivo { get; set; }
+        public int DataArrivo { get; set; }
 
         public string Denominazione { get; set; }
 
@@ -36,7 +36,7 @@ namespace MANUT_SOFTWARE.ViewModels
 
         public string Matricola { get; set; }
 
-        public DateTime AnnoDiCostruzione { get; set; }
+        public int AnnoDiCostruzione { get; set; }
 
         // public Image  Immagine { get; set; }   //da verificare formato!!
 

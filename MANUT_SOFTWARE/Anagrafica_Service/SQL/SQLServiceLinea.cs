@@ -11,19 +11,19 @@ namespace MANUT_SOFTWARE.Service
 {
     class SQLServiceLinea : SQLClass_ServiceConnect
     {
-        public void LineaSQL_INSERT(string Codice, string Nome)
+        public void LineaSQL_INSERT(string Codice, string Nome,string RepartoAssociato)
         {
 
             LineaViewModel Linea = new LineaViewModel();
             SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
 
-            string query = "INSERT INTO " + Manutenzione.LineaSQL+" ("+ nameof(Linea.Codice)+"," + nameof(Linea.Nome)+") VALUES(@Codice, @Nome)";
+            string query = "INSERT INTO " + Manutenzione.LineaSQL+" ("+ nameof(Linea.Codice)+"," + nameof(Linea.Nome)+ "," + nameof(Linea.RepartoAssociato) + ") VALUES(@Codice, @Nome,@RepartoAssociato)";
             SqlCommand cmd = new SqlCommand(query,Open());
 
             //Pass values to Parameters
             cmd.Parameters.AddWithValue("@Codice", Codice);
             cmd.Parameters.AddWithValue("@Nome", Nome);
-
+            cmd.Parameters.AddWithValue("@RepartoAssociato", RepartoAssociato);
             try
             {
                  cmd.ExecuteNonQuery();
@@ -60,6 +60,7 @@ namespace MANUT_SOFTWARE.Service
                         L.ID = (Int32)reader["ID"];
                         L.Codice = reader["Codice"].ToString();
                         L.Nome = reader["Nome"].ToString();
+                        L.RepartoAssociato = reader["RepartoAssociato"].ToString();
                         LL.Add(L);
 
                     }
