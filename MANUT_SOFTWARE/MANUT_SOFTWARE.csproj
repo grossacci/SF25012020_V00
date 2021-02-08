@@ -51,11 +51,17 @@
     <Compile Include="Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceLinea.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceReparto.cs" />
+    <Compile Include="View\FormRicerca\CercaMacchineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRicerca\CercaMacchineForm.Designer.cs">
+      <DependentUpon>CercaMacchineForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQLClass_ServiceConnect.cs" />
-    <Compile Include="View\Anagrafiche.cs">
+    <Compile Include="View\UserControl\Anagrafiche.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Anagrafiche.Designer.cs">
+    <Compile Include="View\UserControl\Anagrafiche.Designer.cs">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -81,7 +87,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Anagrafiche.resx">
+    <EmbeddedResource Include="View\FormRicerca\CercaMacchineForm.resx">
+      <DependentUpon>CercaMacchineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

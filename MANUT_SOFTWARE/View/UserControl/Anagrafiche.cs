@@ -47,6 +47,8 @@ namespace MANUT_SOFTWARE
 
             RepartoSQL.RepartoSQL_INSERT("REP-", txReparto_Nom.Text);
             CaricaCbMacchine_Reparto();
+            CaricaCbMacchine_Linea();
+            CaricaCbMacchine_RepartoAss();
         }
         #endregion
 
@@ -123,17 +125,22 @@ namespace MANUT_SOFTWARE
 
         public void CaricaCbMacchine_Reparto()
         {
-            cbMacchina_Rep.Items.Clear();
+         //   cbMacchina_Rep.Items.Clear();
             ComboBoxService C = new ComboBoxService();
             foreach (RepartoViewModel R in C.ServiceRepartoSELECT())
-            cbMacchina_Rep.Items.Add(R.Codice + R.ID + ": " + R.Nome);
-            try
+            {
+                        cbMacchina_Rep.Items.Add(R.Codice + R.ID + ": " + R.Nome);
+            }
+            
+               try
             {
                 cbMacchina_Rep.SelectedIndex = 0;
             }
             catch (ArgumentOutOfRangeException e)
-            { MessageBox.Show(e.ToString()); }
-          
+            {
+                //MessageBox.Show(e.ToString());
+            }
+           
         }
 
         private void cbMacchina_Rep_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -187,10 +194,17 @@ namespace MANUT_SOFTWARE
             }
         }
 
+
+
+
         #endregion
 
-      
+        private void cercaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CercaMacchineForm CR = new CercaMacchineForm();
+            CR.Show();
 
-       
+
+        }
     }
 }

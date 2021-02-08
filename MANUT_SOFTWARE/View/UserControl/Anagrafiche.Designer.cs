@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txMacchina_AndiCostr = new System.Windows.Forms.TextBox();
+            this.txMacchina_DataArr = new System.Windows.Forms.TextBox();
             this.cbMacchine_Dism = new System.Windows.Forms.ComboBox();
             this.cbMacchina_Lin = new System.Windows.Forms.ComboBox();
             this.cbMacchina_Rep = new System.Windows.Forms.ComboBox();
@@ -60,6 +62,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbLinea_RepAss = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txLinea_Nom = new System.Windows.Forms.TextBox();
             this.txLinea_Cod = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -95,10 +99,6 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.txMacchina_DataArr = new System.Windows.Forms.TextBox();
-            this.txMacchina_AndiCostr = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbLinea_RepAss = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -156,6 +156,20 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dettagli Macchina";
+            // 
+            // txMacchina_AndiCostr
+            // 
+            this.txMacchina_AndiCostr.Location = new System.Drawing.Point(225, 526);
+            this.txMacchina_AndiCostr.Name = "txMacchina_AndiCostr";
+            this.txMacchina_AndiCostr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_AndiCostr.TabIndex = 24;
+            // 
+            // txMacchina_DataArr
+            // 
+            this.txMacchina_DataArr.Location = new System.Drawing.Point(225, 130);
+            this.txMacchina_DataArr.Name = "txMacchina_DataArr";
+            this.txMacchina_DataArr.Size = new System.Drawing.Size(232, 26);
+            this.txMacchina_DataArr.TabIndex = 15;
             // 
             // cbMacchine_Dism
             // 
@@ -423,6 +437,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dettagli Linea";
             // 
+            // cbLinea_RepAss
+            // 
+            this.cbLinea_RepAss.FormattingEnabled = true;
+            this.cbLinea_RepAss.Location = new System.Drawing.Point(225, 130);
+            this.cbLinea_RepAss.Name = "cbLinea_RepAss";
+            this.cbLinea_RepAss.Size = new System.Drawing.Size(232, 28);
+            this.cbLinea_RepAss.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(141, 20);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Reparto Associato";
+            // 
             // txLinea_Nom
             // 
             this.txLinea_Nom.Location = new System.Drawing.Point(225, 86);
@@ -506,7 +537,7 @@
             this.menuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(142, 114);
+            this.menuStrip3.Size = new System.Drawing.Size(142, 133);
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -528,6 +559,7 @@
             this.cercaToolStripMenuItem.Name = "cercaToolStripMenuItem";
             this.cercaToolStripMenuItem.Size = new System.Drawing.Size(133, 25);
             this.cercaToolStripMenuItem.Text = "Cerca";
+            this.cercaToolStripMenuItem.Click += new System.EventHandler(this.cercaToolStripMenuItem_Click);
             // 
             // modificaToolStripMenuItem
             // 
@@ -783,37 +815,6 @@
             this.label19.Size = new System.Drawing.Size(64, 17);
             this.label19.TabIndex = 0;
             this.label19.Text = "Dettagli";
-            // 
-            // txMacchina_DataArr
-            // 
-            this.txMacchina_DataArr.Location = new System.Drawing.Point(225, 130);
-            this.txMacchina_DataArr.Name = "txMacchina_DataArr";
-            this.txMacchina_DataArr.Size = new System.Drawing.Size(232, 26);
-            this.txMacchina_DataArr.TabIndex = 15;
-            // 
-            // txMacchina_AndiCostr
-            // 
-            this.txMacchina_AndiCostr.Location = new System.Drawing.Point(225, 526);
-            this.txMacchina_AndiCostr.Name = "txMacchina_AndiCostr";
-            this.txMacchina_AndiCostr.Size = new System.Drawing.Size(232, 26);
-            this.txMacchina_AndiCostr.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 20);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Reparto Associato";
-            // 
-            // cbLinea_RepAss
-            // 
-            this.cbLinea_RepAss.FormattingEnabled = true;
-            this.cbLinea_RepAss.Location = new System.Drawing.Point(225, 130);
-            this.cbLinea_RepAss.Name = "cbLinea_RepAss";
-            this.cbLinea_RepAss.Size = new System.Drawing.Size(232, 28);
-            this.cbLinea_RepAss.TabIndex = 31;
             // 
             // AnagraficaMacchine
             // 
