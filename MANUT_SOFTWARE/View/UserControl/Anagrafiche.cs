@@ -109,7 +109,6 @@ namespace MANUT_SOFTWARE
         }
         #endregion 
 
-
         #region CARICAMENTO DEI CB
 
 

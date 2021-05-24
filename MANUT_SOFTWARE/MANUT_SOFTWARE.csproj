@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnagraficaViewModels\RDIViewModel.cs" />
     <Compile Include="Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceNomeTabelle.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceLinea.cs" />
     <Compile Include="Anagrafica_Service\SQL\SQLServiceReparto.cs" />
+    <Compile Include="View\UserControl\RDI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\RDI.Designer.cs">
+      <DependentUpon>RDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormRicerca\CercaMacchineForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\RDI.resx">
+      <DependentUpon>RDI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
