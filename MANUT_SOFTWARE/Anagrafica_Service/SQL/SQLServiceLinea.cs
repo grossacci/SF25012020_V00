@@ -16,7 +16,6 @@ namespace MANUT_SOFTWARE.Service
 
             LineaViewModel Linea = new LineaViewModel();
             SQLServiceNomeTabelle Manutenzione = new SQLServiceNomeTabelle();
-
             string query = "INSERT INTO " + Manutenzione.LineaSQL+" ("+ nameof(Linea.Codice)+"," + nameof(Linea.Nome)+ "," + nameof(Linea.RepartoAssociato) + ") VALUES(@Codice, @Nome,@RepartoAssociato)";
             SqlCommand cmd = new SqlCommand(query,Open());
 

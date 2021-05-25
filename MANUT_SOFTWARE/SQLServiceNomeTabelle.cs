@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MANUT_SOFTWARE.Service
+namespace MANUT_SOFTWARE
 {
     class SQLServiceNomeTabelle
     {
