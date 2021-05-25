@@ -30,27 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDI));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.txRDI_Macc = new System.Windows.Forms.TextBox();
+            this.txRDI_Descr = new System.Windows.Forms.TextBox();
+            this.txRDI_MatImp = new System.Windows.Forms.TextBox();
+            this.txRDI_Note = new System.Windows.Forms.TextBox();
+            this.txRDI_NomeCognomeOP = new System.Windows.Forms.TextBox();
+            this.ckRDI_EffSI = new System.Windows.Forms.CheckBox();
+            this.ckRDI_EffNO = new System.Windows.Forms.CheckBox();
+            this.ckRDI_ChiusoNO = new System.Windows.Forms.CheckBox();
+            this.ckRDI_ChiusoSI = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.btn_Salva_RDI = new System.Windows.Forms.ToolStripMenuItem();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txRDI_FirmaOP = new System.Windows.Forms.TextBox();
+            this.txRDI_FirmaRespManut = new System.Windows.Forms.TextBox();
+            this.mtxRDI_OraInizio = new System.Windows.Forms.MaskedTextBox();
+            this.mtxRDI_DataIns = new System.Windows.Forms.MaskedTextBox();
+            this.txRDI_CodMacc = new System.Windows.Forms.TextBox();
+            this.mtxRDI_OraFine = new System.Windows.Forms.MaskedTextBox();
+            this.mtxRDI_DataVerifica = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -69,111 +70,87 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txRDI_Macc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(267, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 29);
-            this.textBox1.TabIndex = 1;
+            this.txRDI_Macc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_Macc.Location = new System.Drawing.Point(267, 90);
+            this.txRDI_Macc.Name = "txRDI_Macc";
+            this.txRDI_Macc.Size = new System.Drawing.Size(332, 29);
+            this.txRDI_Macc.TabIndex = 1;
             // 
-            // textBox2
+            // txRDI_Descr
             // 
-            this.textBox2.Location = new System.Drawing.Point(164, 191);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(700, 78);
-            this.textBox2.TabIndex = 2;
+            this.txRDI_Descr.Location = new System.Drawing.Point(164, 191);
+            this.txRDI_Descr.Multiline = true;
+            this.txRDI_Descr.Name = "txRDI_Descr";
+            this.txRDI_Descr.Size = new System.Drawing.Size(700, 78);
+            this.txRDI_Descr.TabIndex = 2;
             // 
-            // textBox3
+            // txRDI_MatImp
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox3.Location = new System.Drawing.Point(725, 129);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 29);
-            this.textBox3.TabIndex = 3;
+            this.txRDI_MatImp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_MatImp.Location = new System.Drawing.Point(164, 334);
+            this.txRDI_MatImp.Multiline = true;
+            this.txRDI_MatImp.Name = "txRDI_MatImp";
+            this.txRDI_MatImp.Size = new System.Drawing.Size(700, 44);
+            this.txRDI_MatImp.TabIndex = 5;
             // 
-            // textBox4
+            // txRDI_Note
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox4.Location = new System.Drawing.Point(722, 275);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 29);
-            this.textBox4.TabIndex = 4;
+            this.txRDI_Note.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_Note.Location = new System.Drawing.Point(164, 408);
+            this.txRDI_Note.Multiline = true;
+            this.txRDI_Note.Name = "txRDI_Note";
+            this.txRDI_Note.Size = new System.Drawing.Size(700, 44);
+            this.txRDI_Note.TabIndex = 6;
             // 
-            // textBox5
+            // txRDI_NomeCognomeOP
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox5.Location = new System.Drawing.Point(164, 334);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(700, 44);
-            this.textBox5.TabIndex = 5;
+            this.txRDI_NomeCognomeOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_NomeCognomeOP.Location = new System.Drawing.Point(348, 458);
+            this.txRDI_NomeCognomeOP.Name = "txRDI_NomeCognomeOP";
+            this.txRDI_NomeCognomeOP.Size = new System.Drawing.Size(263, 29);
+            this.txRDI_NomeCognomeOP.TabIndex = 8;
             // 
-            // textBox6
+            // ckRDI_EffSI
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox6.Location = new System.Drawing.Point(164, 408);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(700, 44);
-            this.textBox6.TabIndex = 6;
+            this.ckRDI_EffSI.AutoSize = true;
+            this.ckRDI_EffSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ckRDI_EffSI.Location = new System.Drawing.Point(464, 136);
+            this.ckRDI_EffSI.Name = "ckRDI_EffSI";
+            this.ckRDI_EffSI.Size = new System.Drawing.Size(15, 14);
+            this.ckRDI_EffSI.TabIndex = 9;
+            this.ckRDI_EffSI.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // ckRDI_EffNO
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox7.Location = new System.Drawing.Point(727, 44);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 29);
-            this.textBox7.TabIndex = 7;
+            this.ckRDI_EffNO.AutoSize = true;
+            this.ckRDI_EffNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ckRDI_EffNO.Location = new System.Drawing.Point(542, 136);
+            this.ckRDI_EffNO.Name = "ckRDI_EffNO";
+            this.ckRDI_EffNO.Size = new System.Drawing.Size(15, 14);
+            this.ckRDI_EffNO.TabIndex = 10;
+            this.ckRDI_EffNO.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // ckRDI_ChiusoNO
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox8.Location = new System.Drawing.Point(348, 458);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(263, 29);
-            this.textBox8.TabIndex = 8;
+            this.ckRDI_ChiusoNO.AutoSize = true;
+            this.ckRDI_ChiusoNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ckRDI_ChiusoNO.Location = new System.Drawing.Point(583, 284);
+            this.ckRDI_ChiusoNO.Name = "ckRDI_ChiusoNO";
+            this.ckRDI_ChiusoNO.Size = new System.Drawing.Size(15, 14);
+            this.ckRDI_ChiusoNO.TabIndex = 12;
+            this.ckRDI_ChiusoNO.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // ckRDI_ChiusoSI
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(464, 136);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.checkBox2.Location = new System.Drawing.Point(542, 136);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.checkBox3.Location = new System.Drawing.Point(583, 284);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.checkBox4.Location = new System.Drawing.Point(522, 284);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 11;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ckRDI_ChiusoSI.AutoSize = true;
+            this.ckRDI_ChiusoSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ckRDI_ChiusoSI.Location = new System.Drawing.Point(522, 284);
+            this.ckRDI_ChiusoSI.Name = "ckRDI_ChiusoSI";
+            this.ckRDI_ChiusoSI.Size = new System.Drawing.Size(15, 14);
+            this.ckRDI_ChiusoSI.TabIndex = 11;
+            this.ckRDI_ChiusoSI.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -205,7 +182,7 @@
             this.menuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(142, 52);
+            this.menuStrip3.Size = new System.Drawing.Size(142, 33);
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -241,50 +218,91 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Dettagli";
             // 
-            // textBox9
+            // txRDI_FirmaOP
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox9.Location = new System.Drawing.Point(681, 458);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(181, 29);
-            this.textBox9.TabIndex = 14;
+            this.txRDI_FirmaOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_FirmaOP.Location = new System.Drawing.Point(681, 458);
+            this.txRDI_FirmaOP.Name = "txRDI_FirmaOP";
+            this.txRDI_FirmaOP.Size = new System.Drawing.Size(181, 29);
+            this.txRDI_FirmaOP.TabIndex = 14;
             // 
-            // textBox10
+            // txRDI_FirmaRespManut
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox10.Location = new System.Drawing.Point(360, 491);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(135, 29);
-            this.textBox10.TabIndex = 15;
+            this.txRDI_FirmaRespManut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_FirmaRespManut.Location = new System.Drawing.Point(635, 491);
+            this.txRDI_FirmaRespManut.Name = "txRDI_FirmaRespManut";
+            this.txRDI_FirmaRespManut.Size = new System.Drawing.Size(229, 29);
+            this.txRDI_FirmaRespManut.TabIndex = 16;
             // 
-            // textBox11
+            // mtxRDI_OraInizio
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox11.Location = new System.Drawing.Point(635, 491);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(229, 29);
-            this.textBox11.TabIndex = 16;
+            this.mtxRDI_OraInizio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.mtxRDI_OraInizio.Location = new System.Drawing.Point(726, 129);
+            this.mtxRDI_OraInizio.Mask = "00:00";
+            this.mtxRDI_OraInizio.Name = "mtxRDI_OraInizio";
+            this.mtxRDI_OraInizio.Size = new System.Drawing.Size(134, 29);
+            this.mtxRDI_OraInizio.TabIndex = 18;
+            this.mtxRDI_OraInizio.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxRDI_DataIns
+            // 
+            this.mtxRDI_DataIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.mtxRDI_DataIns.Location = new System.Drawing.Point(727, 46);
+            this.mtxRDI_DataIns.Mask = "00/00/0000";
+            this.mtxRDI_DataIns.Name = "mtxRDI_DataIns";
+            this.mtxRDI_DataIns.Size = new System.Drawing.Size(134, 26);
+            this.mtxRDI_DataIns.TabIndex = 20;
+            this.mtxRDI_DataIns.ValidatingType = typeof(System.DateTime);
+            // 
+            // txRDI_CodMacc
+            // 
+            this.txRDI_CodMacc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txRDI_CodMacc.Location = new System.Drawing.Point(727, 90);
+            this.txRDI_CodMacc.Name = "txRDI_CodMacc";
+            this.txRDI_CodMacc.Size = new System.Drawing.Size(134, 29);
+            this.txRDI_CodMacc.TabIndex = 21;
+            // 
+            // mtxRDI_OraFine
+            // 
+            this.mtxRDI_OraFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.mtxRDI_OraFine.Location = new System.Drawing.Point(726, 275);
+            this.mtxRDI_OraFine.Mask = "00:00";
+            this.mtxRDI_OraFine.Name = "mtxRDI_OraFine";
+            this.mtxRDI_OraFine.Size = new System.Drawing.Size(134, 29);
+            this.mtxRDI_OraFine.TabIndex = 22;
+            this.mtxRDI_OraFine.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxRDI_DataVerifica
+            // 
+            this.mtxRDI_DataVerifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.mtxRDI_DataVerifica.Location = new System.Drawing.Point(359, 490);
+            this.mtxRDI_DataVerifica.Mask = "00/00/0000";
+            this.mtxRDI_DataVerifica.Name = "mtxRDI_DataVerifica";
+            this.mtxRDI_DataVerifica.Size = new System.Drawing.Size(134, 29);
+            this.mtxRDI_DataVerifica.TabIndex = 23;
+            this.mtxRDI_DataVerifica.ValidatingType = typeof(System.DateTime);
             // 
             // RDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.mtxRDI_DataVerifica);
+            this.Controls.Add(this.mtxRDI_OraFine);
+            this.Controls.Add(this.txRDI_CodMacc);
+            this.Controls.Add(this.mtxRDI_DataIns);
+            this.Controls.Add(this.mtxRDI_OraInizio);
+            this.Controls.Add(this.txRDI_FirmaRespManut);
+            this.Controls.Add(this.txRDI_FirmaOP);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ckRDI_ChiusoNO);
+            this.Controls.Add(this.ckRDI_ChiusoSI);
+            this.Controls.Add(this.ckRDI_EffNO);
+            this.Controls.Add(this.ckRDI_EffSI);
+            this.Controls.Add(this.txRDI_NomeCognomeOP);
+            this.Controls.Add(this.txRDI_Note);
+            this.Controls.Add(this.txRDI_MatImp);
+            this.Controls.Add(this.txRDI_Descr);
+            this.Controls.Add(this.txRDI_Macc);
             this.Controls.Add(this.pictureBox1);
             this.Name = "RDI";
             this.Size = new System.Drawing.Size(1280, 558);
@@ -304,26 +322,27 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox txRDI_Macc;
+        private System.Windows.Forms.TextBox txRDI_Descr;
+        private System.Windows.Forms.TextBox txRDI_MatImp;
+        private System.Windows.Forms.TextBox txRDI_Note;
+        private System.Windows.Forms.TextBox txRDI_NomeCognomeOP;
+        private System.Windows.Forms.CheckBox ckRDI_EffSI;
+        private System.Windows.Forms.CheckBox ckRDI_EffNO;
+        private System.Windows.Forms.CheckBox ckRDI_ChiusoNO;
+        private System.Windows.Forms.CheckBox ckRDI_ChiusoSI;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem btn_Salva_RDI;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txRDI_FirmaOP;
+        private System.Windows.Forms.TextBox txRDI_FirmaRespManut;
+        private System.Windows.Forms.MaskedTextBox mtxRDI_OraInizio;
+        private System.Windows.Forms.MaskedTextBox mtxRDI_DataIns;
+        private System.Windows.Forms.TextBox txRDI_CodMacc;
+        private System.Windows.Forms.MaskedTextBox mtxRDI_OraFine;
+        private System.Windows.Forms.MaskedTextBox mtxRDI_DataVerifica;
     }
 }

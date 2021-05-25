@@ -41,7 +41,7 @@ namespace MANUT_SOFTWARE.RDI_Service.SQL
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("L'RDI è stato inserito correttamente");
+                MessageBox.Show("L'RDI è stato inserito correttamente!");
             }
             catch (SqlException e)
             {
