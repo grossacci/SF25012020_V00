@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace MANUT_SOFTWARE.AnagraficaViewModels
+namespace MANUT_SOFTWARE.RDIViewModels
 {
     class RDIViewModel
     {
+        
+        public string CodRdi { get; set ; }
 
         //DATETIME
         public DateTime DataIns { get; set; }

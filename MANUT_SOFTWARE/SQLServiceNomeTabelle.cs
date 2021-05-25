@@ -14,5 +14,8 @@ namespace MANUT_SOFTWARE.Service
 
       public string RepartoSQL = "RepartoSQL";
 
+      public string RdiSQL = "RdiSQL";
+
+
     }
 }

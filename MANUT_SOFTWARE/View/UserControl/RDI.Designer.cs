@@ -45,7 +45,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.btn_Salva_Macchina = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Salva_RDI = new System.Windows.Forms.ToolStripMenuItem();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -201,22 +201,23 @@
             // 
             this.menuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(59)))), ((int)(((byte)(88)))));
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_Salva_Macchina});
+            this.btn_Salva_RDI});
             this.menuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(142, 33);
+            this.menuStrip3.Size = new System.Drawing.Size(142, 52);
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
-            // btn_Salva_Macchina
+            // btn_Salva_RDI
             // 
-            this.btn_Salva_Macchina.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btn_Salva_Macchina.ForeColor = System.Drawing.Color.White;
-            this.btn_Salva_Macchina.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Salva_Macchina.Name = "btn_Salva_Macchina";
-            this.btn_Salva_Macchina.Size = new System.Drawing.Size(133, 25);
-            this.btn_Salva_Macchina.Text = "Salva";
+            this.btn_Salva_RDI.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btn_Salva_RDI.ForeColor = System.Drawing.Color.White;
+            this.btn_Salva_RDI.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Salva_RDI.Name = "btn_Salva_RDI";
+            this.btn_Salva_RDI.Size = new System.Drawing.Size(133, 25);
+            this.btn_Salva_RDI.Text = "Salva";
+            this.btn_Salva_RDI.Click += new System.EventHandler(this.btn_Salva_RDI_Click);
             // 
             // panel7
             // 
@@ -318,7 +319,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.MenuStrip menuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem btn_Salva_Macchina;
+        private System.Windows.Forms.ToolStripMenuItem btn_Salva_RDI;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox9;
