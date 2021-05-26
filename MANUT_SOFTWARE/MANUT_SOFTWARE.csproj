@@ -46,17 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RDIViewModels\RDIViewModel.cs" />
-    <Compile Include="Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
+    <Compile Include="RDI\RDIViewModels\RDIViewModel.cs" />
+    <Compile Include="Anagrafica\Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
+    <Compile Include="Servizi\RDI_Servizi\RDIServizi.cs" />
     <Compile Include="SQLServiceNomeTabelle.cs" />
-    <Compile Include="Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
-    <Compile Include="Anagrafica_Service\SQL\SQLServiceLinea.cs" />
-    <Compile Include="Anagrafica_Service\SQL\SQLServiceReparto.cs" />
-    <Compile Include="RDI_Service\SQL\SQLServiceRDI.cs" />
-    <Compile Include="View\UserControl\RDI.cs">
+    <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
+    <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceLinea.cs" />
+    <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceReparto.cs" />
+    <Compile Include="RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
+    <Compile Include="RDI\RDI_UserControl\RDI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UserControl\RDI.Designer.cs">
+    <Compile Include="RDI\RDI_UserControl\RDI.Designer.cs">
       <DependentUpon>RDI.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormRicerca\CercaMacchineForm.cs">
@@ -80,9 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AnagraficaViewModels\RepartoViewModel.cs" />
-    <Compile Include="AnagraficaViewModels\MacchineViewModel.cs" />
-    <Compile Include="AnagraficaViewModels\LineaViewModel.cs" />
+    <Compile Include="Anagrafica\AnagraficaViewModels\RepartoViewModel.cs" />
+    <Compile Include="Anagrafica\AnagraficaViewModels\MacchineViewModel.cs" />
+    <Compile Include="Anagrafica\AnagraficaViewModels\LineaViewModel.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,7 +102,7 @@
     <EmbeddedResource Include="View\UserControl\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControl\RDI.resx">
+    <EmbeddedResource Include="RDI\RDI_UserControl\RDI.resx">
       <DependentUpon>RDI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
