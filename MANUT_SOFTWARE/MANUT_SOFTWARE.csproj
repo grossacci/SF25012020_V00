@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RDI\RDI_Service\Generali\RDI_ServiziUserControl.cs" />
-    <Compile Include="RDI\RDI_ViewModels\RDIViewModel.cs" />
+    <Compile Include="2_RDI\RDI_Service\Generali\RDI_ServiziUserControl.cs" />
+    <Compile Include="2_RDI\RDI_ViewModels\RDIViewModel.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
     <Compile Include="SQLServiceNomeTabelle.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceLinea.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceReparto.cs" />
-    <Compile Include="RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
-    <Compile Include="RDI\RDI_UserControl\RDI.cs">
+    <Compile Include="2_RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
+    <Compile Include="2_RDI\RDI_UserControl\RDI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RDI\RDI_UserControl\RDI.Designer.cs">
+    <Compile Include="2_RDI\RDI_UserControl\RDI.Designer.cs">
       <DependentUpon>RDI.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormRicerca\CercaMacchineForm.cs">
@@ -102,7 +102,7 @@
     <EmbeddedResource Include="View\UserControl\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RDI\RDI_UserControl\RDI.resx">
+    <EmbeddedResource Include="2_RDI\RDI_UserControl\RDI.resx">
       <DependentUpon>RDI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
