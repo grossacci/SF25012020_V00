@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RDI\RDI_Service\Generali\RDI_ServiziUserControl.cs" />
     <Compile Include="RDI\RDI_ViewModels\RDIViewModel.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
-    <Compile Include="Servizi\RDI_Servizi\RDIServizi.cs" />
     <Compile Include="SQLServiceNomeTabelle.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceLinea.cs" />
