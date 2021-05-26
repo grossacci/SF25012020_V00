@@ -54,10 +54,10 @@
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceLinea.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceReparto.cs" />
     <Compile Include="2_RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
-    <Compile Include="2_RDI\RDI_UserControl\RDI.cs">
+    <Compile Include="View\UserControl\RDI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="2_RDI\RDI_UserControl\RDI.Designer.cs">
+    <Compile Include="View\UserControl\RDI.Designer.cs">
       <DependentUpon>RDI.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormRicerca\CercaMacchineForm.cs">
@@ -102,7 +102,7 @@
     <EmbeddedResource Include="View\UserControl\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="2_RDI\RDI_UserControl\RDI.resx">
+    <EmbeddedResource Include="View\UserControl\RDI.resx">
       <DependentUpon>RDI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -117,6 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="2_RDI\RDI_UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

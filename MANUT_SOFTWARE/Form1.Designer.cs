@@ -33,7 +33,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.anagraficaMacchine1 = new MANUT_SOFTWARE.AnagraficaMacchine();
-            this.rdi1 = new MANUT_SOFTWARE.RDI();
+          //  this.rdi1 = new MANUT_SOFTWARE.RDI();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.rdi1);
+//            this.panel4.Controls.Add(this.rdi1);
             this.panel4.Controls.Add(this.anagraficaMacchine1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(154, 106);
@@ -86,12 +86,12 @@
             // 
             // rdi1
             // 
-            this.rdi1.Dock = System.Windows.Forms.DockStyle.Fill;
+/*            this.rdi1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdi1.Location = new System.Drawing.Point(0, 0);
             this.rdi1.Name = "rdi1";
             this.rdi1.Size = new System.Drawing.Size(1216, 608);
             this.rdi1.TabIndex = 1;
-            // 
+  */          // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
