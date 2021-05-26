@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MANUT_SOFTWARE.Service;
 using MANUT_SOFTWARE.ViewModels;
-using MANUT_SOFTWARE.RDIViewModels;
+using MANUT_SOFTWARE.RDI.RDI_ViewModel;
 using MANUT_SOFTWARE.RDI_Service.SQL;
 
 namespace MANUT_SOFTWARE

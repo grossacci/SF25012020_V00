@@ -46,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2_RDI\RDI_Service\Generali\RDI_ServiziUserControl.cs" />
-    <Compile Include="2_RDI\RDI_ViewModels\RDIViewModel.cs" />
+    <Compile Include="RDI\RDI_Service\Generali\RDI_ServiziUserControl.cs" />
+    <Compile Include="RDI\RDI_ViewModels\RDIViewModel.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\Generali\Combobox\ComboBoxService.cs" />
     <Compile Include="SQLServiceNomeTabelle.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceMacchina.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceLinea.cs" />
     <Compile Include="Anagrafica\Anagrafica_Service\SQL\SQLServiceReparto.cs" />
-    <Compile Include="2_RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
+    <Compile Include="RDI\RDI_Service\SQL\SQLServiceRDI.cs" />
     <Compile Include="View\UserControl\RDI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,7 +119,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="2_RDI\RDI_UserControl\" />
+    <Folder Include="RDI\RDI_UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
